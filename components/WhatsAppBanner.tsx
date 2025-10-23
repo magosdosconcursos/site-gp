@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react';
+import { ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
 
 export default function WhatsAppBanner() {
   return (
@@ -11,13 +11,13 @@ export default function WhatsAppBanner() {
           </h2>
         </div>
         <a
-          href="https://wa.me/5511999999999"
+          href="https://sndflw.com/i/4kFHCgYcOIFz7x598Avv"
           target="_blank"
           rel="noopener noreferrer"
           className="flex justify-center mb-4"
         >
           <div className="bg-primary-orange flex justify-center items-center gap-2 rounded-lg m-auto mt-[-20px] absolute px-6 py-3 hover:bg-primary-orange-dark transition">
-            <MessageCircle size={20} className="text-white" />
+            <ChatBubbleLeftRightIcon className="w-5 h-5 text-white" />
             <p className="text-white font-medium text-center">Grupo VIP do WhatsApp</p>
           </div>
         </a>

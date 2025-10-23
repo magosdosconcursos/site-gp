@@ -75,5 +75,5 @@ O site é totalmente responsivo e otimizado para:
 
 Para mais informações, entre em contato:
 
-- WhatsApp: (11) 99999-9999
+- WhatsApp: 61 8173-3805
 - Email: contato@gabariteipedagogia.com.br

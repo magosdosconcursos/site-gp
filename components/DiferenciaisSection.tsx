@@ -22,7 +22,7 @@ export default function DiferenciaisSection() {
 
   return (
     <div className="container mx-auto px-4">
-      <div className="grid sm:grid-cols-3 gap-4 mt-[-90px] p-4 rounded-lg" style={{ backgroundColor: 'rgba(0, 0, 0, .05)' }}>
+      <div className="grid sm:grid-cols-3 gap-4 mt-[-90px] p-4 rounded-lg bg-white">
         {diferenciais.map((item, index) => (
           <div
             key={index}

@@ -1,4 +1,4 @@
-import { MessageCircle, Mail, Phone } from 'lucide-react';
+import { ChatBubbleLeftRightIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 
 export default function ContatoSection() {
   return (
@@ -17,18 +17,18 @@ export default function ContatoSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/556181733805"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all hover:scale-105"
             >
-              <MessageCircle className="mx-auto mb-4 text-primary-orange" size={48} />
+              <ChatBubbleLeftRightIcon className="mx-auto mb-4 w-12 h-12 text-primary-orange" />
               <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
               <p className="text-gray-300 text-sm mb-3">
                 Atendimento rápido
               </p>
               <p className="text-primary-orange font-semibold">
-                (11) 99999-9999
+                61 8173-3805
               </p>
             </a>
 
@@ -37,7 +37,7 @@ export default function ContatoSection() {
               href="mailto:contato@gabariteipedagogia.com.br"
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all hover:scale-105"
             >
-              <Mail className="mx-auto mb-4 text-primary-orange" size={48} />
+              <EnvelopeIcon className="mx-auto mb-4 w-12 h-12 text-primary-orange" />
               <h3 className="text-xl font-bold mb-2">E-mail</h3>
               <p className="text-gray-300 text-sm mb-3">
                 Suporte técnico
@@ -49,16 +49,16 @@ export default function ContatoSection() {
 
             {/* Telefone */}
             <a
-              href="tel:+5511999999999"
+              href="https://wa.me/556181733805"
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all hover:scale-105"
             >
-              <Phone className="mx-auto mb-4 text-primary-orange" size={48} />
+              <PhoneIcon className="mx-auto mb-4 w-12 h-12 text-primary-orange" />
               <h3 className="text-xl font-bold mb-2">Telefone</h3>
               <p className="text-gray-300 text-sm mb-3">
                 Horário comercial
               </p>
               <p className="text-primary-orange font-semibold">
-                (11) 99999-9999
+                61 8173-3805
               </p>
             </a>
           </div>
@@ -69,15 +69,15 @@ export default function ContatoSection() {
               Grupo VIP no WhatsApp
             </h3>
             <p className="text-xl mb-6">
-              Entre para nosso grupo exclusivo e receba dicas diárias de estudo
+              Entre para o nosso grupo de estudos para receber materiais e aulas gratuitas
             </p>
             <a
-              href="https://wa.me/5511999999999"
+              href="https://sndflw.com/i/4kFHCgYcOIFz7x598Avv"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-primary-orange px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition text-lg"
             >
-              <MessageCircle size={24} />
+              <ChatBubbleLeftRightIcon className="w-4 h-4" />
               Entrar no Grupo VIP
             </a>
           </div>

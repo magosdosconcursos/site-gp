@@ -1,4 +1,4 @@
-import { Play, Clock, FileText } from 'lucide-react';
+import { PlayIcon, ClockIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
 import SectionHeader from './SectionHeader';
 
 export default function CursosSection() {
@@ -69,15 +69,15 @@ export default function CursosSection() {
                 {/* Stats */}
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <Play size={16} className="text-primary-orange" />
+                    <PlayIcon className="w-4 h-4 text-primary-orange" />
                     <span>{curso.videoaulas} videoaulas</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <Clock size={16} className="text-primary-orange" />
+                    <ClockIcon className="w-4 h-4 text-primary-orange" />
                     <span>{curso.duracao} de conteúdo</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-700">
-                    <FileText size={16} className="text-primary-orange" />
+                    <DocumentTextIcon className="w-4 h-4 text-primary-orange" />
                     <span>{curso.materiais} materiais PDF</span>
                   </div>
                 </div>
@@ -90,24 +90,7 @@ export default function CursosSection() {
           ))}
         </div>
 
-        {/* CTA Banner */}
-        <div className="mt-12 bg-gradient-to-r from-secondary-blue-dark to-secondary-green-dark rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Acesso Ilimitado a Todos os Cursos
-          </h3>
-          <p className="text-xl mb-6 text-gray-200">
-            Assine agora e tenha acesso completo a todo o conteúdo
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary-orange">R$ 77,00</div>
-              <div className="text-sm text-gray-300">por mês</div>
-            </div>
-            <button className="bg-primary-orange text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-orange-dark transition text-lg">
-              Começar Agora
-            </button>
-          </div>
-        </div>
+
       </div>
     </section>
   );

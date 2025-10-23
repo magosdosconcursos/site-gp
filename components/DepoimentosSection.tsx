@@ -1,4 +1,16 @@
-import { Star, Quote } from 'lucide-react';
+"use client";
+
+import { StarIcon } from '@heroicons/react/24/solid';
+import { ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
+// import { useState, useRef } from 'react'; // Remove this line
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules'; // Import Swiper modules
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 
 export default function DepoimentosSection() {
   const depoimentos = [
@@ -32,6 +44,19 @@ export default function DepoimentosSection() {
     },
   ];
 
+  // const carouselRef = useRef<HTMLDivElement>(null); // Remove this line
+
+  // const scroll = (direction: 'left' | 'right') => { // Remove this function
+  //   if (carouselRef.current) {
+  //     const scrollAmount = carouselRef.current.offsetWidth;
+  //     if (direction === 'left') {
+  //       carouselRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  //     } else {
+  //       carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  //     }
+  //   }
+  // };
+
   return (
     <section id="depoimentos" className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -44,47 +69,66 @@ export default function DepoimentosSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {depoimentos.map((depoimento, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 rounded-2xl p-8 relative hover:shadow-lg transition-all"
-            >
-              {/* Quote Icon */}
-              <Quote className="absolute top-6 right-6 text-primary-orange/20" size={48} />
+        <div className="relative">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            grabCursor={true}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+            }}
+            className="mySwiper pb-12" // Added pb-12 for pagination dots
+          >
+            {depoimentos.map((depoimento, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  className="bg-white rounded-2xl p-8 relative hover:shadow-lg transition-all"
+                >
+                  {/* Quote Icon */}
+                  <ChatBubbleLeftRightIcon className="absolute top-6 right-6 w-12 h-12 text-primary-orange/20" />
 
-              {/* Estrelas */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(depoimento.nota)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="text-primary-orange fill-current"
-                    size={20}
-                  />
-                ))}
-              </div>
-
-              {/* Depoimento */}
-              <p className="text-gray-700 mb-6 relative z-10">
-                "{depoimento.depoimento}"
-              </p>
-
-              {/* Autor */}
-              <div className="flex items-center gap-4">
-                <div className="bg-gradient-to-br from-primary-orange to-primary-orange-dark rounded-full w-12 h-12 flex items-center justify-center text-2xl">
-                  {depoimento.avatar}
-                </div>
-                <div>
-                  <div className="font-bold text-secondary-blue-dark">
-                    {depoimento.nome}
+                  {/* Estrelas */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(depoimento.nota)].map((_, i) => (
+                      <StarIcon
+                        key={i}
+                        className="w-5 h-5 text-primary-orange"
+                      />
+                    ))}
                   </div>
-                  <div className="text-sm text-gray-600">
-                    {depoimento.cargo}
+
+                  {/* Depoimento */}
+                  <p className="text-gray-700 mb-6 relative z-10">
+                    "{depoimento.depoimento}"
+                  </p>
+
+                  {/* Autor */}
+                  <div className="flex items-center gap-4">
+                    <div className="bg-gradient-to-br from-primary-orange to-primary-orange-dark rounded-full w-12 h-12 flex items-center justify-center text-2xl">
+                      {depoimento.avatar}
+                    </div>
+                    <div>
+                      <div className="font-bold text-secondary-blue-dark">
+                        {depoimento.nome}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {depoimento.cargo}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         {/* CTA Section */}

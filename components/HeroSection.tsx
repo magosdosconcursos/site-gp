@@ -13,7 +13,7 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold text-secondary-blue-dark leading-tight sm:w-2/3">
-              Melhor e maior plataforma pra Concursos de Professor do Brasil
+              Pedagogia de Elite
             </h1>
 
             <p className="text-lg text-gray-700 sm:w-1/2">

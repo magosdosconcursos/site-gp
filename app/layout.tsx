@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import { Montserrat } from "next/font/google"; // Import Montserrat
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "700", "900"] }); // Configure Montserrat
 
 export const metadata: Metadata = {
   title: "Gabaritei Pedagogia - Cursos para Concursos de Magistério",
@@ -15,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="antialiased">
+      <body className={`${montserrat.className} antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

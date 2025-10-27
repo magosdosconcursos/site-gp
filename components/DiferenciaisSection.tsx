@@ -2,8 +2,7 @@ export default function DiferenciaisSection() {
   const diferenciais = [
     {
       title: 'Estude com exclusividade',
-      description: 'Conheça o ambiente de estudos mais completo e moderno do Brasil para os concursos da carreira educacional.',
-      bgColor: 'bg-white',
+      bgColor: 'bg-transparent',
       textColor: 'text-secondary-blue-dark',
     },
     {
@@ -15,14 +14,14 @@ export default function DiferenciaisSection() {
     {
       title: 'O lugar certo para estudar',
       description: 'Conte com o suporte da equipe pedagógica e garanta uma preparação efetiva para sua prova.',
-      bgColor: 'bg-white',
+      bgColor: 'transparent',
       textColor: 'text-secondary-blue-dark',
     },
   ];
 
   return (
     <div className="container mx-auto px-4">
-      <div className="grid sm:grid-cols-3 gap-4 mt-[-90px] p-4 rounded-lg bg-white">
+      <div className="grid sm:grid-cols-3 gap-4 mt-[-90px] p-4 rounded-lg">
         {diferenciais.map((item, index) => (
           <div
             key={index}

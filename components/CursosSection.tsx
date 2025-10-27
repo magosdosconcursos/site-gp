@@ -68,17 +68,19 @@ export default function CursosSection() {
   const [showPopup, setShowPopup] = useState(false);
   const [currentCourseLinks, setCurrentCourseLinks] = useState<{ semanal: string; sabados: string } | null>(null);
 
-  const handleAccessCourse = (links: { semanal: string; sabados: string } | string) => {
-    if (typeof links === 'string') {
-      window.open(links, '_blank');
-    } else {
-      setCurrentCourseLinks(links);
-      setShowPopup(true);
+  const handleAccessCourse = (links?: { semanal: string; sabados: string } | string) => {
+    if (links) {
+      if (typeof links === 'string') {
+        window.open(links, '_blank');
+      } else {
+        setCurrentCourseLinks(links);
+        setShowPopup(true);
+      }
     }
   };
 
   return (
-    <section id="cursos" className="py-16 bg-white">
+    <section id="cursos" className="py-16">
       <div className="container mx-auto px-4">
         <SectionHeader
           label="NOSSOS CURSOS"
@@ -148,7 +150,12 @@ export default function CursosSection() {
                   </div>
 
                   <button
-                    onClick={() => handleAccessCourse(curso.link || curso.links)}
+                    onClick={() => {
+                      const courseLink = curso.link || curso.links;
+                      if (courseLink) {
+                        handleAccessCourse(courseLink);
+                      }
+                    }}
                     className="w-full bg-primary-orange text-white py-2 rounded-lg hover:bg-primary-orange-dark transition font-semibold"
                   >
                     Acessar Curso

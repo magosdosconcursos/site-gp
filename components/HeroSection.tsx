@@ -3,7 +3,7 @@ import { ArrowRightIcon, UsersIcon } from '@heroicons/react/24/outline'; // Impo
 
 export default function HeroSection() {
   return (
-    <section id="inicio" className="bg-white pt-32 pb-16">
+    <section id="inicio" className="pt-32 pb-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-16">
           {/* Texto */}

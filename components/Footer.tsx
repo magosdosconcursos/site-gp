@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <Image
-                src="/logo-horizontal-white.png"
+                src="/fotos/logo-horizontal-white.png"
                 alt="Gabaritei Pedagogia"
                 width={135}
                 height={40}
@@ -31,11 +31,7 @@ export default function Footer() {
                   Nossos Cursos
                 </a>
               </li>
-              <li>
-                <a href="#professores" className="text-gray-300 hover:text-primary-orange transition">
-                  Professores
-                </a>
-              </li>
+
               <li>
                 <a href="#depoimentos" className="text-gray-300 hover:text-primary-orange transition">
                   Depoimentos

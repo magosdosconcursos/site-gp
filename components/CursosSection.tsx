@@ -21,7 +21,7 @@ export default function CursosSection() {
       videoaulas: '200+',
       duracao: '100h',
       materiais: '70+',
-      productImage: '/gabaritei-sedf.png',
+      productImage: '/fotos/Gabaritei SEDF.png',
       link: 'https://pay.hotmart.com/Y101391804Y',
     },
     {
@@ -30,7 +30,7 @@ export default function CursosSection() {
       videoaulas: '150+',
       duracao: '80h',
       materiais: '50+',
-      productImage: '/produto-4-conhecimentos-pedagogicos.png',
+      productImage: '/fotos/Produto 4 - Conhecimentos Pedagógicos.png',
       link: 'https://pay.hotmart.com/E100447778A',
     },
     {
@@ -39,7 +39,7 @@ export default function CursosSection() {
       videoaulas: '100+',
       duracao: '60h',
       materiais: '40+',
-      productImage: '/produto-1-sedf.png',
+      productImage: '/fotos/Produto 1 SEDF.png',
       link: 'https://pay.hotmart.com/K100230197L',
     },
     {
@@ -48,7 +48,7 @@ export default function CursosSection() {
       videoaulas: '120+',
       duracao: '70h',
       materiais: '45+',
-      productImage: '/produto-2-curso-2-em-1-planaltina-go.png',
+      productImage: '/fotos/Produto 2 Curso 2 em 1 Planaltina - GO.png',
       links: {
         semanal: 'https://pay.hotmart.com/S102311337J',
         sabados: 'https://pay.hotmart.com/L102314627N',
@@ -60,7 +60,7 @@ export default function CursosSection() {
       videoaulas: '80+',
       duracao: '50h',
       materiais: '35+',
-      productImage: '/produto-3-1000-questoes.png',
+      productImage: '/fotos/Produto 3 1000 questões.png',
       link: 'https://pay.hotmart.com/A101708062X?bid=1761314454974',
     },
   ];

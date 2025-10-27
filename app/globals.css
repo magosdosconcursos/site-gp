@@ -7,6 +7,7 @@
   --primary-orange-dark: #e8772d;
   --secondary-green: #007854;
   --secondary-green-dark: #005a3f;
+  --green-glow: 120 100% 40%; /* A vibrant green */
 }
 
 body {
@@ -19,4 +20,23 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes glow-green {
+  0% {
+    transform: translate(-50%, 50%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-glow-green {
+  animation: glow-green 3s ease-out infinite alternate;
+}
+
+.text-shadow-custom {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }

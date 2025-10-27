@@ -12,7 +12,7 @@ export default function CarlaSection() {
         <div className="flex flex-col md:flex-row items-start gap-8">
           <div className="md:w-1/2">
             <Image
-              src="/palestra-professora.png"
+              src="/fotos/Palestra Professora.png"
               alt="Professora Carla Oliveira em palestra"
               width={600}
               height={400}
@@ -30,7 +30,7 @@ export default function CarlaSection() {
               Desenvolveu um método único que combina técnica, acolhimento e foco estratégico, ajudando milhares de profissionais a conquistarem seus objetivos na carreira docente.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mt-4">
-              Sua abordagem humanizada e resultados comprovados fizeram dela uma das principais referências em preparação para a Prova Nacional Docente.
+              Sua abordagem humanizada e resultados comprovados fizeram dela uma das principais referências em preparação para concursos na área da pedagogia.
             </p>
           </div>
         </div>

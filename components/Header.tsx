@@ -22,7 +22,7 @@ export default function Header() {
           {/* Logo */}
           <a href="/">
             <Image
-              src="/logo-horizotal-color.png"
+              src="/fotos/logo-horizotal-color.png"
               alt="Gabaritei Pedagogia"
               width={135}
               height={40}
@@ -38,18 +38,14 @@ export default function Header() {
             <a href="#cursos" className="text-sm font-medium text-gray-700 hover:text-primary-orange transition">
               Cursos
             </a>
-            <a href="#professores" className="text-sm font-medium text-gray-700 hover:text-primary-orange transition">
-              Professores
-            </a>
+
             <a href="#depoimentos" className="text-sm font-medium text-gray-700 hover:text-primary-orange transition">
               Depoimentos
             </a>
             <button className="bg-secondary-blue-dark text-white px-4 py-2 rounded hover:bg-secondary-green-dark transition font-medium text-sm">
               Área do Aluno
             </button>
-            <button className="bg-primary-orange text-white px-4 py-2 rounded hover:bg-primary-orange-dark transition font-medium text-sm">
-              Assinatura Ilimitada
-            </button>
+
           </nav>
         </div>
 
@@ -70,13 +66,7 @@ export default function Header() {
             >
               Cursos
             </a>
-            <a
-              href="#professores"
-              className="block text-gray-700 hover:text-primary-orange transition"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Professores
-            </a>
+
             <a
               href="#depoimentos"
               className="block text-gray-700 hover:text-primary-orange transition"
@@ -87,9 +77,7 @@ export default function Header() {
             <button className="bg-secondary-blue-dark text-white px-4 py-2 rounded w-full">
               Área do Aluno
             </button>
-            <button className="bg-primary-orange text-white px-4 py-2 rounded w-full">
-              Assinatura Ilimitada
-            </button>
+
           </nav>
         )}
       </div>

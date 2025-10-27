@@ -1,23 +1,5 @@
 export default function DiferenciaisSection() {
-  const diferenciais = [
-    {
-      title: 'Estude com exclusividade',
-      bgColor: 'bg-transparent',
-      textColor: 'text-secondary-blue-dark',
-    },
-    {
-      title: 'Aprenda com qualidade',
-      description: 'Aqui você terá acesso a materiais didáticos atualizados e completos, com professores experientes e qualificados.',
-      bgColor: 'bg-primary-orange',
-      textColor: 'text-white',
-    },
-    {
-      title: 'O lugar certo para estudar',
-      description: 'Conte com o suporte da equipe pedagógica e garanta uma preparação efetiva para sua prova.',
-      bgColor: 'transparent',
-      textColor: 'text-secondary-blue-dark',
-    },
-  ];
+  const diferenciais: any[] = [];
 
   return (
     <div className="container mx-auto px-4">

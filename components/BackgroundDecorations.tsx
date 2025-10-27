@@ -21,8 +21,11 @@ const BackgroundDecorations = () => {
       {/* Bottom-left blurred blob */}
       <div className="absolute bottom-0 left-0 h-1/2 w-1/2 bg-[radial-gradient(circle_at_bottom_left,_hsl(var(--secondary)_/_0.25),_transparent_50%)] blur-3xl" />
 
-      {/* Top-right blurred blob */}
+      {/* Top-right blurred blob (orange) */}
       <div className="absolute right-0 top-0 h-1/2 w-1/2 bg-[radial-gradient(circle_at_top_right,_hsl(var(--accent)_/_0.25),_transparent_50%)] blur-3xl" />
+
+      {/* New bottom-left green glow */}
+      <div className="absolute bottom-0 left-0 h-1/2 w-1/2 bg-[radial-gradient(circle_at_bottom_left,_hsl(var(--green-glow)_/_0.25),_transparent_50%)] blur-3xl animate-glow-green" />
     </div>
   );
 };

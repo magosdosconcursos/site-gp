@@ -5,55 +5,48 @@ export default function HeroSection() {
   return (
     <section id="inicio" className="pt-32 pb-16">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-16">
-          {/* Texto */}
-          <div className="flex flex-col md:w-1/2 space-y-3 md:space-y-4 text-center md:text-left">
-            <div className="flex gap-2 items-center justify-center md:justify-start">
-              <div className="w-8 h-1 bg-primary-orange"></div>
-              <p className="text-sm font-medium text-gray-600 uppercase tracking-wider animate-fade-in-down">
-                SUA APROVAÇÃO COMEÇA AQUI
-              </p>
-            </div>
-
-            <h1 className="text-[clamp(2.25rem,7vw,4rem)] font-extrabold text-secondary-blue-dark leading-tight tracking-tight animate-fade-in-left">
-              Pedagogia de <span className="bg-gradient-to-t from-primary-orange to-primary-orange-dark text-transparent bg-clip-text">Elite</span>
-            </h1>
-
-            <p className="text-[clamp(1.125rem,2.2vw,1.375rem)] font-medium text-gray-600 max-w-[60ch] leading-relaxed animate-fade-in-right text-balance">
-              Aqui no Gabaritei Pedagogia você encontra exatamente o que precisa para o seu concurso.
-              Estude com a melhor equipe do Brasil e conquiste a sua aprovação.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-4 md:mb-12 animate-fade-in-up">
-              <a
-                href="#cursos"
-                className="bg-primary-orange text-white px-8 py-4 rounded-full hover:bg-primary-orange-dark transition font-bold text-lg flex items-center gap-2 shadow-lg transform hover:scale-105"
-              >
-                Assinatura Ilimitada <ArrowRightIcon className="w-5 h-5" />
-              </a>
-              <a
-                href="#professores"
-                className="bg-secondary-blue-dark text-white px-8 py-4 rounded-full hover:bg-secondary-green-dark transition font-bold text-lg flex items-center gap-2 shadow-lg transform hover:scale-105"
-              >
-                Professores <UsersIcon className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Imagem */}
-          <div className="md:w-1/2 flex items-center justify-center relative">
-            <div className="relative w-96 h-96 rounded-3xl overflow-hidden border-8 border-primary-orange shadow-lg" style={{ marginTop: '-38.4px' }}>
-              <Image
-                src="/professora-carla.png"
-                alt="Foto da Professora Carla Oliveira"
-                layout="fill"
-                objectFit="cover"
-                className="scale-125"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div className="flex flex-col md:flex-row items-center gap-16 relative">
+                    {/* Texto */}
+                    <div className="flex flex-col md:w-1/2 space-y-3 md:space-y-4 text-center md:text-left">
+                      <div className="flex gap-2 items-center justify-center md:justify-start">
+                        <div className="w-8 h-1 bg-primary-orange"></div>
+                        <p className="text-sm font-medium text-gray-600 uppercase tracking-wider animate-fade-in-down">
+                          SUA APROVAÇÃO COMEÇA AQUI
+                        </p>
+                      </div>
+          
+                      <h1 className="text-[clamp(2.25rem,7vw,4rem)] font-extrabold text-secondary-blue-dark leading-tight tracking-tight animate-fade-in-left text-shadow-custom relative">
+                      Pedagogia de <span className="text-primary-orange drop-shadow-[0_0_10px_rgba(255,145,77,0.7)]">Elite
+                      <Image
+                        src="/fotos/Sublinhado 2.png"
+                        alt="Sublinhado decorativo"
+                        width={500}
+                        height={44}
+                        className="absolute left-1/2 transform -translate-x-1/2 bottom-[-70px] w-[120%] h-auto"
+                      />
+                      </span>
+                      </h1>
+          
+                                              <p className="text-[clamp(1.125rem,2.2vw,1.375rem)] font-bold text-gray-600 max-w-[60ch] leading-relaxed animate-fade-in-right">
+          
+                                                Encontre exatamente o que precisa para conquistar a sua aprovação na área da pedagogia.
+          
+                                              </p>                    </div>
+          
+                    {/* Imagem */}
+                    <div className="md:w-1/2 flex items-center justify-center relative">
+                      <Image
+                        src="/fotos/Foto Carla 2.png"
+                        alt="Foto da Professora Carla Oliveira"
+                        width={400}
+                        height={400}
+                        className="rounded-lg"
+                      />
+                    </div>
+                    {/* Horizontal Line */}
+                    <div className="absolute bottom-0 left-0 right-0 border-b-4 border-primary-orange"></div>
+                  </div>
+                </div>
+              </section>
   );
 }

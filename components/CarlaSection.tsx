@@ -2,9 +2,14 @@ import Image from "next/image";
 
 export default function CarlaSection() {
   return (
-    <section id="professora-carla" className="py-16">
+    <section id="professora-carla" className="relative py-16 overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[image:linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:36px_36px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]"></div>
+        <div className="absolute bottom-0 left-0 h-1/2 w-1/2 bg-[radial-gradient(circle_at_bottom_left,_hsl(var(--primary)_/_0.25),_transparent_60%)] blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-1/2 w-1/2 bg-[radial-gradient(circle_at_bottom_right,_hsl(var(--secondary)_/_0.25),_transparent_60%)] blur-3xl" />
+      </div>
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex flex-col md:flex-row items-start gap-8">
           <div className="md:w-1/2">
             <Image
               src="/palestra-professora.png"

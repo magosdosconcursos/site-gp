@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-16">
           {/* Texto */}
-          <div className="flex flex-col md:w-1/2 gap-6 text-center md:text-left">
+          <div className="flex flex-col md:w-1/2 space-y-3 md:space-y-4 text-center md:text-left">
             <div className="flex gap-2 items-center justify-center md:justify-start">
               <div className="w-8 h-1 bg-primary-orange"></div>
               <p className="text-sm font-medium text-gray-600 uppercase tracking-wider animate-fade-in-down">
@@ -15,11 +15,11 @@ export default function HeroSection() {
               </p>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-extrabold text-secondary-blue-dark leading-tight animate-fade-in-left">
+            <h1 className="text-[clamp(2.25rem,7vw,4rem)] font-extrabold text-secondary-blue-dark leading-tight tracking-tight animate-fade-in-left">
               Pedagogia de <span className="bg-gradient-to-t from-primary-orange to-primary-orange-dark text-transparent bg-clip-text">Elite</span>
             </h1>
 
-            <p className="text-lg text-gray-700 sm:w-full md:w-3/4 leading-relaxed animate-fade-in-right">
+            <p className="text-[clamp(1.125rem,2.2vw,1.375rem)] font-medium text-gray-600 max-w-[60ch] leading-relaxed animate-fade-in-right text-balance">
               Aqui no Gabaritei Pedagogia você encontra exatamente o que precisa para o seu concurso.
               Estude com a melhor equipe do Brasil e conquiste a sua aprovação.
             </p>

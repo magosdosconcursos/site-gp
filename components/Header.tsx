@@ -42,7 +42,7 @@ export default function Header() {
             <a href="#depoimentos" className="text-sm font-medium text-gray-700 hover:text-primary-orange transition">
               Depoimentos
             </a>
-            <button className="bg-secondary-blue-dark text-white px-4 py-2 rounded hover:bg-secondary-green-dark transition font-medium text-sm">
+            <button className="bg-primary-orange text-white px-4 py-2 rounded hover:bg-primary-orange-dark transition font-medium text-sm">
               Área do Aluno
             </button>
 

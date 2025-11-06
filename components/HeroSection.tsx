@@ -17,13 +17,7 @@ export default function HeroSection() {
           
                       <h1 className="text-[clamp(2.25rem,7vw,4rem)] font-extrabold text-secondary-blue-dark leading-tight tracking-tight animate-fade-in-left text-shadow-custom relative">
                       Pedagogia de <span className="text-primary-orange drop-shadow-[0_0_10px_rgba(255,145,77,0.7)]">Elite
-                      <Image
-                        src="/fotos/Sublinhado 2.png"
-                        alt="Sublinhado decorativo"
-                        width={500}
-                        height={44}
-                        className="absolute left-1/2 transform -translate-x-1/2 bottom-[-70px] w-[120%] h-auto"
-                      />
+
                       </span>
                       </h1>
           

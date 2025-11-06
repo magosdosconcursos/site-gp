@@ -1,43 +1,76 @@
 "use client";
 
-import { StarIcon } from '@heroicons/react/24/solid';
-import { ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useState, useRef } from 'react';
+import Image from 'next/image';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 
 export default function DepoimentosSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
   const depoimentos = [
     {
-      nome: 'Carla Oliveira',
-      cargo: 'Professora - Prefeitura de São Paulo',
-      depoimento: 'Consegui minha aprovação graças ao conteúdo completo e aos professores excepcionais. O material é muito bem organizado e focado no edital.',
-      nota: 5,
-      avatar: '👩',
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_37_49.642-03_0.jpeg',
     },
     {
-      nome: 'Pedro Almeida',
-      cargo: 'Professor - Prefeitura do Rio de Janeiro',
-      depoimento: 'A metodologia da Gabaritei Pedagogia fez toda a diferença na minha preparação. Passei em 2º lugar no concurso!',
-      nota: 5,
-      avatar: '👨',
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_37_52.298-03_0.jpeg',
     },
     {
-      nome: 'Juliana Ferreira',
-      cargo: 'Professora - Prefeitura de Curitiba',
-      depoimento: 'Excelente custo-benefício! O suporte dos professores e o cronograma de estudos foram essenciais para minha aprovação.',
-      nota: 5,
-      avatar: '👩',
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_37_55.034-03_0.jpeg',
     },
     {
-      nome: 'Ricardo Souza',
-      cargo: 'Professor - Prefeitura de Belo Horizonte',
-      depoimento: 'Tentei por anos e só consegui depois que conheci a Gabaritei. Material atualizado e professores que realmente entendem de concursos.',
-      nota: 5,
-      avatar: '👨',
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_37_57.406-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_37_59.543-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_02.217-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_05.391-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_07.839-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_10.077-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_12.367-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_14.812-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_17.315-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_19.638-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_22.198-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_25.155-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_27.465-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_30.229-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_32.533-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_34.796-03_0.jpeg',
+    },
+    {
+      image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_38_37.350-03_0.jpeg',
     },
   ];
 
@@ -85,40 +118,17 @@ export default function DepoimentosSection() {
             {depoimentos.map((depoimento, index) => (
               <SwiperSlide key={index} className="h-full group">
                 <div
-                  className="bg-white dark:bg-gray-800 rounded-2xl p-8 relative h-full transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-orange"
+                  className="bg-white dark:bg-gray-800 rounded-2xl p-8 relative h-full transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-orange cursor-pointer"
                   tabIndex={0}
+                  onClick={() => setSelectedImage(depoimento.image)}
                 >
-                  <div
-                    aria-hidden="true"
-                    role="presentation"
-                    className={`absolute inset-0 z-0 transition-opacity duration-500 ease-in-out ${activeIndex === index ? 'opacity-100' : 'opacity-0'} group-hover:opacity-100 group-focus:opacity-100`}>
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-primary-orange/20 blur-3xl rounded-full" />
-                  </div>
-                  <ChatBubbleLeftRightIcon className="absolute top-6 right-6 w-12 h-12 text-primary-orange/20 dark:text-primary-orange/30" />
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(depoimento.nota)].map((_, i) => (
-                      <StarIcon
-                        key={i}
-                        className="w-5 h-5 text-primary-orange"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 dark:text-gray-300 mb-6 relative z-10">
-                    "{depoimento.depoimento}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="bg-gradient-to-br from-primary-orange to-primary-orange-dark rounded-full w-12 h-12 flex items-center justify-center text-2xl">
-                      {depoimento.avatar}
-                    </div>
-                    <div>
-                      <div className="font-bold text-secondary-blue-dark dark:text-white">
-                        {depoimento.nome}
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">
-                        {depoimento.cargo}
-                      </div>
-                    </div>
-                  </div>
+                  <Image
+                    src={depoimento.image}
+                    alt={`Depoimento ${index + 1}`}
+                    width={300}
+                    height={500}
+                    className="rounded-lg"
+                  />
                 </div>
               </SwiperSlide>
             ))}
@@ -132,11 +142,31 @@ export default function DepoimentosSection() {
           <p className="text-xl mb-6">
             Junte-se a centenas de professores aprovados
           </p>
-          <button className="bg-white text-primary-orange px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition text-lg motion-safe:hover:scale-105">
+          <a href="#cursos" className="bg-white text-primary-orange px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition text-lg motion-safe:hover:scale-105">
             Começar Agora
-          </button>
+          </a>
         </div>
       </div>
+
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="relative">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 text-white text-4xl"
+            >
+              <XMarkIcon className="w-10 h-10" />
+            </button>
+            <Image
+              src={selectedImage}
+              alt="Depoimento em zoom"
+              width={600}
+              height={1000}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

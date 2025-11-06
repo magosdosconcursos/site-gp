@@ -10,7 +10,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 
 export default function DepoimentosSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const depoimentos = [
     {
       image: '/Depoimentos tratados reduzidos/depoimento_tratado2025-11-06T15_37_49.642-03_0.jpeg',

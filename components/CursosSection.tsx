@@ -54,15 +54,6 @@ export default function CursosSection() {
         sabados: 'https://pay.hotmart.com/L102314627N',
       },
     },
-    {
-      titulo: '1000 questões Gabaritadas',
-      descricao: 'Conteúdos e metodologias para o ensino fundamental',
-      videoaulas: '80+',
-      duracao: '50h',
-      materiais: '35+',
-      productImage: '/fotos/Produto 3 1000 questões.png',
-      link: 'https://pay.hotmart.com/A101708062X?bid=1761314454974',
-    },
   ];
 
   const [showPopup, setShowPopup] = useState(false);

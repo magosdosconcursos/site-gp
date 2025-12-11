@@ -42,6 +42,11 @@ export default function Footer() {
                   Contato
                 </a>
               </li>
+              <li>
+                <a href="/politica-de-privacidade" className="text-gray-300 hover:text-primary-orange transition">
+                  Política de Privacidade
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -107,6 +112,9 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Gabaritei Pedagogia. Todos os direitos reservados.</p>
+          <p className="mt-2 text-sm">
+            CNPJ: 60.295.217/0001-06 | <a href="/politica-de-privacidade" className="hover:text-primary-orange transition underline">Política de Privacidade</a>
+          </p>
         </div>
       </div>
     </footer>

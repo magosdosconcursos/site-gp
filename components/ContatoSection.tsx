@@ -8,8 +8,8 @@ import { IMaskInput } from 'react-imask';
 export default function ContatoSection() {
   const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
+    nome: '',
+    telefone: '',
     email: '',
   });
 
@@ -22,12 +22,15 @@ export default function ContatoSection() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://webhooks.magosdosconcursos.com.br/webhook/QFszlkNjUND4W5sC', {
+      const response = await fetch('https://webhooks.magosdosconcursos.com.br/webhook/gabariteipedagogia', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          "Page URL": window.location.href,
+        }),
       });
 
       if (!response.ok) {
@@ -37,7 +40,7 @@ export default function ContatoSection() {
       // After successful submission, redirect to the WhatsApp group
       window.open('https://sndflw.com/i/K0cY1kTadfD7wcgIwyO2', '_blank');
       setShowPopup(false);
-      setFormData({ name: '', phone: '', email: '' }); // Clear form
+      setFormData({ nome: '', telefone: '', email: '' }); // Clear form
     } catch (error) {
       console.error('There was a problem with the fetch operation:', error);
       // Optionally, show an error message to the user
@@ -126,29 +129,29 @@ export default function ContatoSection() {
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+                  <label htmlFor="nome" className="block text-gray-700 text-sm font-bold mb-2">
                     Nome:
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="nome"
+                    name="nome"
+                    value={formData.nome}
                     onChange={handleInputChange}
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-gray-700 text-sm font-bold mb-2">
+                  <label htmlFor="telefone" className="block text-gray-700 text-sm font-bold mb-2">
                     Telefone:
                   </label>
                   <IMaskInput
                     mask="00 000000000"
-                    value={formData.phone}
-                    onAccept={(value) => handleInputChange({ target: { name: 'phone', value } } as any)}
-                    name="phone"
-                    id="phone"
+                    value={formData.telefone}
+                    onAccept={(value) => handleInputChange({ target: { name: 'telefone', value } } as any)}
+                    name="telefone"
+                    id="telefone"
                     type="tel"
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     required
